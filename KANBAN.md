@@ -8,9 +8,10 @@ fonction carburant applicable a tout avion (baisse du carburant)
     > eviron 1/min arrive 3 min/atterissage  
 
     > optionnel 
-    - si pbm de fuel consomme + de fuel
-    - event (1/1000) president par exemple 
-    
+        - si pbm de fuel consomme + de fuel
+        - event (1/1000) president par exemple 
+        - faire proba (+ de chance qu'il n'y ait pas de probleme)
+
 fonction(niveau diplomatique) -> president (echelle)
     > 1 a 5
     > 
