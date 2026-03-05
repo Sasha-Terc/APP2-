@@ -5,7 +5,7 @@ generer des avions avec donnes aleatoires
 fonction carburant applicable a tout avion (baisse du carburant)
     > faire atterrir ceux qui en ont le moins
     > echelle de 0 a 40 -> quand un avion atteri chq avion baisse de 1 de fuel 
-    > eviron 1/min arrive 3 min/atterissage  
+    > eviron 1/min arrive et 3 min/atterissage normal 
 
     > optionnel 
         - si pbm de fuel consomme + de fuel
