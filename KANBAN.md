@@ -27,6 +27,6 @@ det probleme technique (true or false)
 
 Ki fait koi :
 - Sasha : algo tri avion + prioritaires 
-- benjamin : systeme score probleme avion gloabl , fuel qui baisse
-- virgile : fonction parametre avion (tech issue + de tmps a atterir piste occupee) , event (avion manque react ,president , )
-- anotnin : algo tri avion 
+- benjamin : systeme score probleme avion gloaal , fuel qui baisse
+- virgile : etat piste + tech issues
+- anotnin : supp avion a 0 de fuel , et met avion dans les listes 
