@@ -1,5 +1,5 @@
 import random
-from Trie_par_selection import selection_sort
+from trie_par_selection import selection_sort
 def fuel(nb_avion):
     L_fuel = []
     for i in range (0, nb_avion):
@@ -9,24 +9,14 @@ def fuel(nb_avion):
     return L_fuel
 
 def perte_fuel(liste):
-    while liste:
-        liste.pop(0)
-        for i in range(len(liste)):
-            liste[i] -= 1
+    for i in range(len(liste)):
+        liste[i] -= 1
+    return liste
 
-        nouvelle_liste = []
-        for x in liste:
-            if x > 0:
-                nouvelle_liste.append(x)
-        liste = nouvelle_liste
+  
 
-
-        print(liste)
-    return ""
-
-    
-
-liste = fuel(5)   
+liste = fuel(5) 
+print(liste)  
 print(perte_fuel(liste))
         
 
