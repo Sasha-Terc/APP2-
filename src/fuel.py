@@ -13,7 +13,14 @@ def perte_fuel(liste):
         liste[i] -= 1
     return liste
 
-  
+def fuel_avions(liste):
+    for i in range(len(liste)):
+        if liste[i]["fuel"] <= 0:
+            liste.pop(i)
+            print(liste)
+            return liste
+        else :
+            continue
 
 liste = fuel(5) 
 print(liste)  
