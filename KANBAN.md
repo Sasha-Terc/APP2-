@@ -1,6 +1,9 @@
 à faire :
+
+
 def ordre priorité avion (carburant restant, urgence médicale, incident technique, importance,diplomatique, heure d’arrivée prévue). 
 generer des avions avec donnes aleatoires 
+    > def policy 
 
 fonction carburant applicable a tout avion (baisse du carburant)
     > faire atterrir ceux qui en ont le moins
@@ -17,3 +20,13 @@ fonction(niveau diplomatique) -> president (echelle)
     > 
 fonction det heure arrivee normale des avions
 det probleme technique (true or false)
+
+
+
+
+
+Ki fait koi :
+- Sasha : algo tri avion + prioritaires 
+- benjamin : systeme score probleme avion gloaal , fuel qui baisse
+- virgile : etat piste + tech issues
+- anotnin : supp avion a 0 de fuel , et met avion dans les listes 
