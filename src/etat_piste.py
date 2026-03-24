@@ -1,3 +1,4 @@
+from main import avions_aterris
 def etat_p(occupe, libre):
     if avions_aterris == True:
         etat_piste = occupe
