@@ -44,3 +44,4 @@ for i in range (1,5):
     ordre_priorite.append(choix_ordre)
 
 
+
