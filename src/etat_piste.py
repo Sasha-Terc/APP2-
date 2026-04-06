@@ -1,5 +1,5 @@
-from main import avions_aterris
-def etat_p(occupe, libre):
+
+def etat_p(occupe, libre, avions_aterris = True):
     if avions_aterris == True:
         etat_piste = occupe
     else:
