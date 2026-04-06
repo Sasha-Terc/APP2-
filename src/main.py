@@ -33,14 +33,39 @@ nombre_avions = int(input("Combien d'avion voulez-vous ? : "))
 avion = generate_random_traffic(nombre_avions, scenario = scenario)  
 
 readable = lisibilite(avion)
-print("ordre clé : id, fuel, medical, technical_issue, diplomatic_level, arrival_time")
+print("ordre clé : id, fuel, medical, technical_issue, diplomatic_level")
 for i in readable:
     print(i)
 
-# On doit trier la liste d'avion en fonction de son score
+# On choisi un ordre de priorité
 ordre_priorite = []
+ordre_defaut = ["fuel","medical","technical_issue","diplomatic_level"]
 for i in range (1,5):
-    choix_ordre = input("priorité numéro {} (ecrivez correctement la clé) : ".format(i))
+    choix_ordre = input("""
+    priorité numéro {} : fuel, medical, technical_issue ou diplomatic_level 
+    
+    si c'est mal écrit, l'ordre par défaut sera [fuel, medical, technical_issue, diplomatic_level] : """.format(i))
+
     ordre_priorite.append(choix_ordre)
+
+
+# on verifie que les clé soit bien écrite. Si ce n'est pas le cas, on utilisera l'ordre par défaut
+    
+for i in ordre_priorite:
+    if i in ordre_defaut:
+        pass
+    else:
+        ordre_priorite = ordre_defaut
+
+# on attribue un score à chaque avion qui déterminera l'ordre d'attérrissage
+
+avion_score = score(avion,ordre_priorite)
+avion_trie = tri_avion(avion_score)
+redable = lisibilite(avion_trie)
+for i in redable:
+    print(i)
+    
+
+
 
 
