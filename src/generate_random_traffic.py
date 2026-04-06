@@ -27,7 +27,6 @@ def generate_random_traffic(n, scenario="normal"):
             "medical": medical,
             "technical_issue": technical_issue,
             "diplomatic_level": diplomatic_level,
-            "arrival_time": round(19.40 + i * 0.01, 2)
         })
     
     return avions
