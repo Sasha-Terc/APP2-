@@ -11,22 +11,20 @@ def fuel(nb_avion):                       # fonction pour tester "perte_fuel"
     return L_fuel
 
 def perte_fuel(dico):                    # permet de faire baisser de 1 le carburant de tout les avions
-    for i in range(len(liste)):
-        dico[i]["fuel"] -= 1
-    return liste
+    for i in dico:
+        i["fuel"] -= 1
+    return dico
 
 def fuel_avions(liste):                   # permet de supprimer les avions sans carburant 
-    for i in range(len(liste)):
-        if liste[i]["fuel"] <= 0:
-            liste.pop(i)
-            print(liste)
-            return liste
-        else :
-            continue
+    resultat = []
+    for avion in liste:
+        if avion["fuel"] > 0:
+            resultat.append(avion)
+    return resultat
+    liste = fuel(5) 
 
-liste = fuel(5) 
-print(liste)  
-print(perte_fuel(liste))
+
+
         
 
 
