@@ -6,3 +6,4 @@ def etat_p(occupe, libre, temps_depuis_dernier_atterrissage):
     else:
         etat_piste = libre
     return etat_piste
+    
