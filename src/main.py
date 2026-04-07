@@ -64,6 +64,46 @@ avion_trie = tri_avion(avion_score)
 redable = lisibilite(avion_trie)
 for i in redable:
     print(i)
+
+# Simulation des atterrissages
+tour_actuel = 0
+dernier_atterrissage = -5  # Initialement, la piste est libre
+avions_en_attente = avion_trie.copy()
+avions_atteints = []
+avions_disparus_carburant = []
+
+while avions_en_attente and tour_actuel < 1000:  
+    tour_actuel += 1
+    temps_depuis_dernier = tour_actuel - dernier_atterrissage
+    etat_piste = etat_p("occupée", "libre", temps_depuis_dernier)
+    
+    if etat_piste == "libre" and avions_en_attente:
+        # Faire atterrir le prochain avion
+        avion_atterri = avions_en_attente.pop(0)
+        avions_atteints.append(avion_atterri)
+        dernier_atterrissage = tour_actuel
+        print(f"Minute {tour_actuel}: Avion {avion_atterri['id']} a atterri (fuel restant: {avion_atterri['fuel']}).")
+    else:
+        if avions_en_attente:
+            print(f"Minute {tour_actuel}: Piste occupée, {len(avions_en_attente)} avions en attente.")
+    
+    # Simuler la perte de fuel pour les avions en attente
+    perte_fuel(avions_en_attente)
+    # Vérifier les avions avant suppression
+    avions_perdus = [a for a in avions_en_attente if a["fuel"] <= 0]
+    if avions_perdus:
+        avions_disparus_carburant.extend(avions_perdus)
+        compteur_de_mort += len(avions_perdus)
+    # Supprimer les avions sans fuel
+    avions_en_attente = fuel_avions(avions_en_attente)
+
+print("\n Simulation terminée")
+print(f"Avions atterris: {len(avions_atteints)}")
+print(f"Avions disparus faute de carburant: {compteur_de_mort}")
+print(f"Avions encore en attente: {len(avions_en_attente)}")
+if avions_disparus_carburant:
+    print(f"IDs des avions disparus: {[a['id'] for a in avions_disparus_carburant]}")
+    
     
 
 
