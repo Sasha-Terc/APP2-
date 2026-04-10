@@ -104,6 +104,8 @@ print(f"Avions encore en attente: {len(avions_en_attente)}")
 if avions_disparus_carburant:
     print(f"IDs des avions disparus: {[a['id'] for a in avions_disparus_carburant]}")
     
+
+ #le code fonctionne mais il peut y avoir des dégats avec le mode par défaut donc il faudrait certainement revoir la façon dont l'ont choisit l'ordre de priorite
     
 
 
