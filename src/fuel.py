@@ -10,8 +10,8 @@ def fuel(nb_avion):                       # fonction pour tester "perte_fuel"
     selection_sort(L_fuel,"fuel")
     return L_fuel
 
-def perte_fuel(dico):                    # permet de faire baisser de 1 le carburant de tout les avions
-    for i in dico:
+def perte_fuel(dico):                    # permet de faire baisser de 0.2 le carburant de tout les avions
+    for i in dico:                       # Le carburant baisse de 1 à chaque fois qu'un avion se pose (toute les 5min)
         i["fuel"] -= 1
     return dico
 
